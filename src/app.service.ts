@@ -6,6 +6,6 @@ export class AppService {
   constructor(private configService: ConfigService) {}
 
   getHello(): string {
-    return this.configService.get<string>('MESSAGE');
+    return this.configService.getOrThrow<string>('service.url');
   }
 }
